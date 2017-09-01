@@ -2,7 +2,6 @@ package com.wenping.rxjavaandretrofitdemo;
 
 
 import io.reactivex.Observable;
-import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
@@ -17,22 +16,8 @@ public interface WeatherService {
     @GET("index")
     public Observable<WeatherData>
     getWeatherByRxjava(@Query("cityname") String cityname,
-                      // @Query("dtype") String json,
-                       //@Query("format") int format,
+                       @Query("dtype") String json,
+                       @Query("format") int format,
                        @Query("key") String key);
-
-
-    /**
-     * Retrofit单用
-     * @param city
-     * @param mode
-     * @param APPID
-     * @return
-     */
-    @GET("weather")
-    public Call<WeatherData>
-    getWeather(@Query("q") String city,
-               @Query("mode") String mode,
-               @Query("APPID") String APPID);
 
 }

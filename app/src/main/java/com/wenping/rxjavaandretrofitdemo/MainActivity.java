@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         new Function<String, ObservableSource<WeatherData>>() {
                             @Override
                             public ObservableSource<WeatherData> apply(@NonNull String s) throws Exception {
-                                return new Util().getWeatherService().getWeatherByRxjava(s,
+                                return new Util().getWeatherService().getWeatherByRxjava(s,"json",1,
                                 "4f0400b15ffec0136daf3350cb408480");
                             }
                         }
