@@ -35,32 +35,4 @@ public interface WeatherService {
                @Query("mode") String mode,
                @Query("APPID") String APPID);
 
-
-//    /**
-//     *
-//     * @param city
-//     * @param mode
-//     * @param APPID
-//     * @return
-//     */
-//    @GET("weather")
-//    public Observable<WeatherData> getWeatherByRxJava(
-//            @Query("q") String city,
-//            @Query("mode") String mode,
-//            @Query("APPID") String APPID
-//    );
-//
-//    /**
-//     *
-//     * @param city
-//     * @param mode
-//     * @param appId
-//     * @return
-//     */
-//    @GET("weather")
-//    public Call<WeatherData>getWeather(
-//            @Query("q") String city,
-//            @Query("mode") String mode,
-//            @Query("APPID") String appId
-//    );
 }
